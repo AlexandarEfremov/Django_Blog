@@ -1,7 +1,7 @@
 {% load static %}
 <li>
     <article class="post">
-        <a href="">
+        <a href="{% url 'post_detail' 'the-mountains' %}"> {# a slug must be added either hardcoded or dynamically as a third parameter #}
             <img src="{% static "images/mountains.png" %}" alt="Mountain Hiking">
             <div class="post__content">
                 <h3>Mountain Hiking</h3>
