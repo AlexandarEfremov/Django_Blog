@@ -1,12 +1,57 @@
 {% extends "blog/base.html" %} 
 {#This inherits from base.html#}
+{% load static %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "index.css" %}">
+{% endblock %}
 {% block title %}
     My Blog
 {% endblock %}
 {# these blocks are then populated directly in the base.html dynamically #}
 {% block content %}
-    <h1>Welcome to my Blog</h1>
+    <header id="main-navigation">
+        <h1>
+            <a href="">Alex's Blog</a>
+        </h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+    
+    <section id="welcome">
+        <header>
+            <img src="" alt="Alex - The author of this Blog">
+            <h2>ALEX'S BLOG</h2>
+        </header>
+        <p>Hi, I'm Alex and I like programming.</p>
+    </section>
+    
+    <section id="latest-posts">
+        <h2>
+            My latest thoughts:
+        </h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Mountain Hiking">
+                        <div class="post__content">
+                            <h3>Mountain Hiking</h3>
+                            <p>There's nothing better than hiking in the mountain.</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="about">
+        <h2>What I do</h2>
+        <p>
+            I'm interested in Python and enjoy coding as a hobby.
+        </p>
+    </section>
 {% endblock %}
 
 
