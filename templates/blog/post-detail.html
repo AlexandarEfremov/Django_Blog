@@ -1,0 +1,47 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "post-details.css" %}">
+{% endblock %}
+
+{% block title %}
+    This Post Title
+{% endblock %}
+
+{# these blocks are then populated directly in the base.html dynamically #}
+{% block content %}
+        <section id="summary">
+            <h2>Post Title</h2>
+            <article>
+                <img src="{% static 'images/mountains.png' %}" alt="Post Title">
+                <address>By Aleksandar</address>
+                <div>
+                    Last updated on <time>October 10</time>
+                </div>
+            </article>
+        </section>
+    
+    
+        <main>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra purus lorem. Duis elementum 
+                mi non porta hendrerit. Fusce mollis tortor a purus eleifend euismod. Etiam pharetra, eros id molestie 
+                interdum, ex enim fringilla magna, eu fermentum orci neque vel purus. Donec sed nisl urna. 
+                Morbi leo leo, sodales ut.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra purus lorem. Duis elementum 
+                mi non porta hendrerit. Fusce mollis tortor a purus eleifend euismod. Etiam pharetra, eros id molestie 
+                interdum, ex enim fringilla magna, eu fermentum orci neque vel purus. Donec sed nisl urna. 
+                Morbi leo leo, sodales ut.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra purus lorem. Duis elementum 
+                mi non porta hendrerit. Fusce mollis tortor a purus eleifend euismod. Etiam pharetra, eros id molestie 
+                interdum, ex enim fringilla magna, eu fermentum orci neque vel purus. Donec sed nisl urna. 
+                Morbi leo leo, sodales ut.
+            </p>
+            
+        </main>
+{% endblock %}

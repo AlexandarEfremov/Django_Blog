@@ -10,6 +10,6 @@ def posts(request):
     return render(request, "blog/all-posts.html")
 
 
-def post_detail(request):
-    return HttpResponse("Full Post")
+def post_detail(request, slug): #we need to add the slug parameter as it's a dynamic value
+    return render(request, "blog/post-detail.html")
 
