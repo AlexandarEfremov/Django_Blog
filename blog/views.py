@@ -86,9 +86,14 @@ def starting_page(request):
 
 
 def posts(request):
-    return render(request, "blog/all-posts.html")
+    return render(request, "blog/all-posts.html", {
+        "all_posts": all_posts
+    })
 
 
 def post_detail(request, slug): #we need to add the slug parameter as it's a dynamic value
-    return render(request, "blog/post-detail.html")
+    id_post = next(post for post in all_posts if post['slug'] == slug)
+    return render(request, "blog/post-detail.html", {
+        "post": id_post
+    })
 
