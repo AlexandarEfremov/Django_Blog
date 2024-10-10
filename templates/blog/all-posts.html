@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "all-posts.css" %}">
+{% endblock %}
+
+{% block title %}
+    All my posts
+{% endblock %}
+
+{% block content %}
+    <section id="all-posts">
+        <h2>My collected posts</h2>
+        <ul>
+            {% include "includes/post.html" %}
+            {% include "includes/post.html" %}
+            {% include "includes/post.html" %}
+            {% include "includes/post.html" %}
+            {% include "includes/post.html" %}
+            {% include "includes/post.html" %}
+            {# include basically adds snippets from the includes folder so that we don't re-write code #}
+        </ul>
+    </section>
+{% endblock %}
